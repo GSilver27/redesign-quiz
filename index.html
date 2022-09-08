@@ -80,7 +80,7 @@
     </section>
 
     <aside class="quiz">
-        <section class="step-1">
+        <section id="step-1">
             <h2>
                 Пройдите опрос за пару минут и <span class="color-white">получите БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</span>
                 по способам списания конкретно Ваших долгов!
@@ -91,6 +91,32 @@
                 <input class="validator" type="text" name="city" minlength="3" placeholder="Введите ваш город" required>
             </form>
             <button class="btn-quiz">Узнать результат сейчас</button>
+            <div class="step__info">За каждый ответ - скидка 555 руб. </div>
+        </section>
+
+        <section id="step-2">
+            <h2>
+                Сумма долга (общая задолженность по всем кредитам и другим долговым обязательствам)
+            </h2>
+            <form action="">
+                <div class="form__item">
+                    <input type="radio" name="step-1">
+                    До 100.000 руб.
+                </div>
+                <div class="form__item">
+                    <input type="radio" name="step-1">
+                    От 100.000 руб. до 250.000 руб.
+                </div>
+                <div class="form__item">
+                    <input type="radio" name="step-1">
+                    От 250.000 руб. до 500 000 руб.
+                </div>
+                <div class="form__item">
+                    <input type="radio" name="step-1">
+                    Более 500 000 руб.
+                </div>
+            </form>
+            <button class="btn-quiz">Далее</button>
             <div class="step__info">За каждый ответ - скидка 555 руб. </div>
         </section>
     </aside>
