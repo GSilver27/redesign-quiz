@@ -86,42 +86,319 @@
                 по способам списания конкретно Ваших долгов!
             </h2>
             <form action="">
-                <input class="validator" type="text" name="name" minlength="2" placeholder="Введите ваше ФИО" required>
+                <input class="validator" id="name" type="text" name="name" minlength="2" placeholder="Введите ваше ФИО" required>
                 <input class="validator" type="tel" name="phone" minlength="11" placeholder="Введите ваш номер телефона" required>
-                <input class="validator" type="text" name="city" minlength="3" placeholder="Введите ваш город" required>
+                <input class="validator" id="city" type="text" name="city" minlength="3" placeholder="Введите ваш город" required>
             </form>
-            <button class="btn-quiz">Узнать результат сейчас</button>
-            <div class="step__info">За каждый ответ - скидка 555 руб. </div>
         </section>
 
         <section id="step-2">
-            <h2>
-                Сумма долга (общая задолженность по всем кредитам и другим долговым обязательствам)
-            </h2>
+            <h2>1. Сумма долга (общая задолженность по всем кредитам и другим долговым обязательствам)</h2>
             <form action="">
-                <div class="form__item">
-                    <input type="radio" name="step-1">
-                    До 100.000 руб.
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-2" value="-100">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">До 100.000 руб.</div>
+                    </label>
                 </div>
-                <div class="form__item">
-                    <input type="radio" name="step-1">
-                    От 100.000 руб. до 250.000 руб.
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-2" value="100-250">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">От 100.000 руб. до 250.000 руб.</div>
+                    </label>
                 </div>
-                <div class="form__item">
-                    <input type="radio" name="step-1">
-                    От 250.000 руб. до 500 000 руб.
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-2" value="250-500">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">От 250.000 руб. до 500 000 руб.</div>
+                    </label>
                 </div>
-                <div class="form__item">
-                    <input type="radio" name="step-1">
-                    Более 500 000 руб.
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-2" value="500+">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Более 500 000 руб.</div>
+                    </label>
                 </div>
             </form>
-            <button class="btn-quiz">Далее</button>
-            <div class="step__info">За каждый ответ - скидка 555 руб. </div>
         </section>
+
+        <section id="step-3">
+            <h2>2. Сколько у вас кредитов и займов?</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-3" value="1-3">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">1 - 3</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-3" value="4-6">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">4 - 6</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-3" value="6+">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Более 6</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-3" value="unknown">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Не знаю</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-4">
+            <h2>3. Имущество в залоге у кредиторов?</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-4" value="no">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Нет</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-4" value="car">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Автомобиль в залоге (автокредит)</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-4" value="home">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Дача, дом, земля в залоге</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-4" value="unknown">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Квартира в ипотеке</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-4" value="other">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Другое</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-5">
+            <h2>4. Сделки за предыдущие 3 года?</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-5" value="no">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Не было</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-5" value="car">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Дарение квартиры, доли, комнаты</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-5" value="home">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Продажа или дарение дома, дачи, земли</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-5" value="unknown">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Развод или заключение брачного договора</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-5" value="other">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Продажа или дарение автомобиля</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-5" value="other">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Продажа или дарение квартиры, доли, комнаты</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-5" value="other">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Другое</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-6">
+            <h2>5. Просрочка (Срок неуплаты долгов?)</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-6" value="1-3">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Нет</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-6" value="4-6">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">1 - 3 дня</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-6" value="6+">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">3 дня - 1 месяц</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-6" value="unknown">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Больше месяца</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-7">
+            <h2>6. Наличие обязательств по выплате алиментов?</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-7" value="1-3">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Да</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-7" value="4-6">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Нет</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-8">
+            <h2>7. Наличие ипотеки</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-8" value="1-3">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Да</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-8" value="4-6">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Нет</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-9">
+            <h2>8. Ваш официальный доход?</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-9" value="no">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Нет</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-9" value="car">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">До 20. 000 руб.</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-9" value="home">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">От 20. 000 руб. до 40. 000 руб.</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-9" value="unknown">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Больше 40. 000 руб.</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-10">
+            <h2>9. Удерживают ли судебные приставы Ваш доход?</h2>
+            <form action="">
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-10" value="1-3">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Да</div>
+                    </label>
+                </div>
+                <div class="quiz__item">
+                    <label class="quiz__label">
+                        <input class="quiz__input " type="radio" name="step-10" value="4-6">
+                        <span class="quiz__span"></span>
+                        <div class="quiz__text">Нет</div>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <section id="step-11">
+            <h2>Благодарим за<br> прохождение опроса!</h2>
+            <div class="quiz__discount">Ваша скидка - <span class="color-blue">5000 руб.</span></div>
+            <div class="step__info">В ближайшее время мы с Вами свяжемся</div>
+        </section>
+
+        <div class="quiz__bottom-part">
+            <button class="btn-quiz">Далее</button>
+            <div class="step__info">За каждый ответ - скидка 555 руб.</div>
+        </div>
     </aside>
 </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="script/mask.js"></script>
     <script src="script/quiz.js"></script>
 
 </body>

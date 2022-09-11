@@ -78,9 +78,6 @@ body {
     text-align: end;
 }
 
-.header__info .color-blue {
-}
-
 .header__info-small {
     font-weight: 400;
     font-size: 10px;
@@ -150,6 +147,8 @@ main h1 {
 
 aside {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     width: 40%;
@@ -160,14 +159,26 @@ aside {
     background-image: url("../img/quiz-background.png");
 }
 
+#step-2 h2, #step-3 h2, #step-4 h2,
+#step-4 h2, #step-5 h2, #step-6 h2,
+#step-7 h2, #step-8 h2, #step-9 h2,
+#step-10 h2, #step-11 h2 {
+    font-weight: 600;
+}
+
+#step-11 h2 {
+    text-transform: uppercase;
+}
+
 .quiz input {
     border-radius: 5px;
     color: #0C1126;
     cursor: pointer;
 }
 
-#step-1 .quiz input {
-    min-width: 350px;
+.quiz #step-1 input {
+    min-width: 380px;
+    box-sizing: border-box;
     padding: 20px 25px;
 }
 
@@ -191,7 +202,7 @@ aside {
 }
 
 .btn-quiz {
-    min-width: 350px;
+    min-width: 380px;
     padding: 20px 25px;
     background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
     border-radius: 5px;
@@ -202,6 +213,10 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.btn-quiz:hover {
     box-shadow: 0 0 20px #00C6FF;
 }
 
@@ -209,17 +224,83 @@ aside {
     font-weight: 400;
     font-size: 15px;
     line-height: 148%;
+    margin-top: 2vmin;
 }
 
-#step-1, #step-2 {
+.quiz__discount {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 148.4%;
+    margin-top: 12px;
+}
+
+.quiz__item {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    min-width: 380px;
+    background: #FFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.quiz__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.quiz__input {
+    position: relative;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.quiz__span {
+    border-radius: 50%;
+    border: 1px solid #0072FF;
+    width: 34px;
+    height: 34px;
+    margin-right: 15px;
+}
+
+.quiz__input:checked + .quiz__span,
+.quiz__input:focus + .quiz__span {
+    background: #0072FF;
+}
+
+.quiz__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 148.4%;
+    color: #0C1126;
+}
+
+.quiz__bottom-part {
+    display: block;
+    margin-top: 20px;
+}
+
+#step-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-#step-1 form,
-#step-2 form {
+#step-2, #step-3, #step-4,
+#step-4, #step-5, #step-6,
+#step-7, #step-8, #step-9,
+#step-10, #step-11 {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#step-1 form {
     margin-top: 4vmin;
     display: flex;
     flex-direction: column;
@@ -227,11 +308,18 @@ aside {
     gap: 20px;
 }
 
-#step-1 {
-    display: none;
+#step-2 form, #step-3 form,
+#step-4 form, #step-5 form,
+#step-6 form, #step-7 form,
+#step-8 form, #step-9 form,
+#step-10 form, #step-11 form {
+    margin-top: 4vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
-
-
 
 @media screen and (max-width: 1024px) {
     .wrapper {
@@ -330,6 +418,36 @@ aside {
     h2 {
         font-size: 16px;
         line-height: 148.4%;
+    }
+
+    .quiz #step-1 input {
+        min-width: 350px;
+    }
+
+    .btn-quiz {
+        min-width: 350px;
+    }
+
+    .quiz__span {
+        width: 16px;
+        height: 16px;
+    }
+
+    .quiz__item {
+        min-width: 350px;
+    }
+
+
+    #step-11 h2 {
+        font-size: 20px;
+    }
+
+    .quiz__discount {
+        font-size: 16px;
+    }
+
+    .step__info {
+        font-size: 13px;
     }
 }
 
