@@ -23,10 +23,9 @@ $(document).ready(function () {
         else if (step === 7 && $('input[name="step-7"]').is(':checked')) changeStep();
         else if (step === 8 && $('input[name="step-8"]').is(':checked')) changeStep();
         else if (step === 9 && $('input[name="step-9"]').is(':checked')) changeStep();
-        else if (step === 10 && $('input[name="step-10"]').is(':checked')) changeStep();
+        else if (step === 10 && $('input[name="step-10"]').is(':checked')) {
+            changeStep();
+            $('.quiz__bottom-part').fadeOut(300);
+        }
     });
-
-    if (!$('#step-11').is(':hidden')) {
-        $('.quiz__bottom-part').hide();
-    }
 });
