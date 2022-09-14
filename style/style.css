@@ -182,6 +182,10 @@ aside {
     padding: 20px 25px;
 }
 
+.quiz #step-8 .quiz__item {
+    min-width: 380px;
+}
+
 .form__item input {
     margin-right: 20px;
 }
@@ -192,10 +196,13 @@ aside {
 }
 
 .validator:invalid {
+    transition: 0.1s;
     border: 3px solid #EB3349;
 }
 .validator:valid {
+    transition: 0.7s;
     border: 3px solid #0072FF;
+    box-shadow: 0 0 10px #0072FF;
 }
 .validator:invalid:not(:focus) {
     border: 1px solid #0C1126;
@@ -238,7 +245,8 @@ aside {
     display: flex;
     flex-direction: row;
     padding: 15px;
-    min-width: 380px;
+    width: 100%;
+    max-width: 380px;
     background: #FFF;
     border-radius: 5px;
     box-sizing: border-box;
@@ -263,6 +271,7 @@ aside {
     width: 34px;
     height: 34px;
     margin-right: 15px;
+    transition: 0.5s;
 }
 
 .quiz__input:checked + .quiz__span,
@@ -274,11 +283,15 @@ aside {
     font-weight: 400;
     font-size: 15px;
     line-height: 148.4%;
+    text-align: left;
+    max-width: 265px;
     color: #0C1126;
 }
 
 .quiz__bottom-part {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -300,7 +313,7 @@ aside {
 }
 
 
-#step-1 form {
+#step-1 .step__container {
     margin-top: 4vmin;
     display: flex;
     flex-direction: column;
@@ -308,11 +321,11 @@ aside {
     gap: 20px;
 }
 
-#step-2 form, #step-3 form,
-#step-4 form, #step-5 form,
-#step-6 form, #step-7 form,
-#step-8 form, #step-9 form,
-#step-10 form, #step-11 form {
+#step-2 .step__container, #step-3 .step__container,
+#step-4 .step__container, #step-5 .step__container,
+#step-6 .step__container, #step-7 .step__container,
+#step-8 .step__container, #step-9 .step__container,
+#step-10 .step__container, #step-11 .step__container {
     margin-top: 4vmin;
     display: flex;
     flex-direction: column;
@@ -379,13 +392,41 @@ aside {
     }
 }
 
-@media screen and (max-width: 425px) {
-
+@media screen and (max-width: 600px) {
     main h1 {
         font-size: 20px;
         line-height: 127.9%;
     }
 
+    .item-text {
+        font-size: 14px;
+        line-height: 148.4%;
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: 148.4%;
+    }
+
+    .quiz__span {
+        width: 16px;
+        height: 16px;
+    }
+
+    #step-11 h2 {
+        font-size: 20px;
+    }
+
+    .quiz__discount {
+        font-size: 16px;
+    }
+
+    .step__info {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 425px) {
     .bg-img {
         width: 400px;
         background-size: 410px;
@@ -406,18 +447,20 @@ aside {
         height: 57px;
     }
 
-    .item-text {
-        font-size: 14px;
-        line-height: 148.4%;
-    }
-
     aside {
         background-image: url("../img/quiz-background-mobile.png");
     }
 
-    h2 {
-        font-size: 16px;
-        line-height: 148.4%;
+    aside section {
+        padding: 0 5px;
+    }
+
+    #step-2 .step__container, #step-3 .step__container,
+    #step-4 .step__container, #step-5 .step__container,
+    #step-6 .step__container, #step-7 .step__container,
+    #step-8 .step__container, #step-9 .step__container,
+    #step-10 .step__container, #step-11 .step__container {
+        min-width: 350px;
     }
 
     .quiz #step-1 input {
@@ -428,26 +471,12 @@ aside {
         min-width: 350px;
     }
 
-    .quiz__span {
-        width: 16px;
-        height: 16px;
-    }
-
     .quiz__item {
+        max-width: 350px;
+    }
+
+    .quiz #step-8 .quiz__item {
         min-width: 350px;
-    }
-
-
-    #step-11 h2 {
-        font-size: 20px;
-    }
-
-    .quiz__discount {
-        font-size: 16px;
-    }
-
-    .step__info {
-        font-size: 13px;
     }
 }
 
