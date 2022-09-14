@@ -24,4 +24,6 @@ $(document).ready(function () {
             $('.quiz__bottom-part').fadeOut(300);
         }
     });
+
+    $('input[name="phone"]').mask("+79999999999");
 });
